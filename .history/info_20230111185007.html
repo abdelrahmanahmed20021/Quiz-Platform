@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <!-- ======== Meta =========== -->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Question || Platform</title>
+        <!-- ======== Links =========== -->
+        <link rel="stylesheet" href="./styles/index.css">
+        <link rel="stylesheet" href="./styles/responsive.css">
+        <style>
+            .info-answers{
+                padding: 40px;
+                background-color: lightseagreen;
+                font-family:  'Oswald', sans-serif;
+                border: 2px solid lightcoral;
+            }
+            .info-answers li{
+                color: aliceblue;
+                padding: 20px 0;
+                font-size: 1.2rem;
+            }
+            .info-answers li img{
+                width: 300px;
+                border-radius: 10px;
+            }
+        </style>
+        <!-- ======== Links =========== -->
+    </head>
+    <body>
+
+
+
+       <script type="module">
+          import {data} from "./auth/data.js";
+
+          const body = document.querySelector("body");
+
+          data.forEach((e) =>{
+            const result_ans = e.answer;
+            body.insertAdjacentHTML("afterend",`
+            <ul class="info-answers">
+                <li>${e.quest}</li>
+                <li><img src="${e.img !=" " ? e.img : "No Image At this Quesition" }"alt=""></li>
+                <li>Answer : ${e[result_ans]}</li>
+                <li>Explanation : ${e.explanation}</li>
+            </ul>
+            
+            `)
+          })
+       </script>
+    </body>
+</html>
