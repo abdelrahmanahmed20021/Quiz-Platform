@@ -8,7 +8,7 @@ This project utilizes the following technologies:
 
 | Technology | Description |
 |------------|-------------|
-| JavaScript | The primary programming language used for the client-side logic. |
+| TypeScript | The primary programming language used for the client-side logic. |
 | CSS | Used for styling and layout of the web application. |
 | Sass | A CSS preprocessor that enhances the styling workflow with features like variables, mixins, and nested rules. |
 | Node.js | A JavaScript runtime used for the server-side logic and running the API server. |
